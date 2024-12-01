@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Azure AD Authentication</h1>
+
+  <mat-form-field appearance="outline" class="input-field">
+    <mat-label>Client ID</mat-label>
+    <input matInput [(ngModel)]="clientId" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="input-field">
+    <mat-label>Tenant ID</mat-label>
+    <input matInput [(ngModel)]="tenantId" />
+  </mat-form-field>
+
+  <div class="buttons">
+    <button mat-raised-button color="primary" (click)="login()">Login</button>
+    <button mat-raised-button color="warn" [disabled]="!isConfigured" (click)="refreshToken()">Refresh Token</button>
+  </div>
+
+  <div class="tokens">
+    <input matInput readonly placeholder="Access Token"/>
+    <button mat-icon-button [cdkCopyToClipboard]="accessToken">
+      <mat-icon>content_copy</mat-icon>
+    </button>
+    <input matInput readonly placeholder="ID Token"/>
+    <button mat-icon-button [cdkCopyToClipboard]="idToken">
+      <mat-icon>content_copy</mat-icon>
+    </button>
+    <input matInput readonly placeholder="Refreshed ID Token"/>
+    <button mat-icon-button [cdkCopyToClipboard]="refreshedIdToken">
+      <mat-icon>content_copy</mat-icon>
+    </button>
+  </div>
+  <div class="tokens">
+    <textarea readonly placeholder="Access Token" [value]="accessToken"></textarea>
+    <textarea readonly placeholder="ID Token" [value]="idToken"></textarea>
+    <textarea readonly placeholder="Refreshed ID Token" [value]="refreshedIdToken"></textarea>
+  </div>
+</div>
