@@ -18,20 +18,11 @@ button {
 
 .tokens {
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
 textarea {
-  width: 30%;
-  height: 150px;
-  padding: 10px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: none;
-}
-
-.tokens input {
-  border: none;
+  height: 200px;
+  margin-right: 30px;
 }

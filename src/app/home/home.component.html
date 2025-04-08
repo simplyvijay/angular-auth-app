@@ -12,27 +12,30 @@
   </mat-form-field>
 
   <div class="buttons">
+    <button mat-raised-button color="primary" (click)="redirectToAuthEndpoint()">Auth Code</button>
     <button mat-raised-button color="primary" (click)="login()">Login</button>
     <button mat-raised-button color="warn" [disabled]="!isConfigured" (click)="refreshToken()">Refresh Token</button>
   </div>
-
-  <div class="tokens">
-    <input matInput readonly placeholder="Access Token"/>
-    <button mat-icon-button [cdkCopyToClipboard]="accessToken">
-      <mat-icon>content_copy</mat-icon>
-    </button>
-    <input matInput readonly placeholder="ID Token"/>
-    <button mat-icon-button [cdkCopyToClipboard]="idToken">
-      <mat-icon>content_copy</mat-icon>
-    </button>
-    <input matInput readonly placeholder="Refreshed ID Token"/>
-    <button mat-icon-button [cdkCopyToClipboard]="refreshedIdToken">
-      <mat-icon>content_copy</mat-icon>
-    </button>
-  </div>
-  <div class="tokens">
-    <textarea readonly placeholder="Access Token" [value]="accessToken"></textarea>
-    <textarea readonly placeholder="ID Token" [value]="idToken"></textarea>
-    <textarea readonly placeholder="Refreshed ID Token" [value]="refreshedIdToken"></textarea>
-  </div>
+</div>
+<div class="tokens">
+  <p><small>Auth Code</small></p>
+  <button mat-icon-button [cdkCopyToClipboard]="authCode">
+    <mat-icon>content_copy</mat-icon>
+  </button>
+  <textarea readonly placeholder="Auth Code" [value]="authCode"></textarea>
+  <p><small>Access Token</small></p>
+  <button mat-icon-button [cdkCopyToClipboard]="accessToken">
+    <mat-icon>content_copy</mat-icon>
+  </button>
+  <textarea readonly placeholder="Access Token" [value]="accessToken"></textarea>
+  <p><small>ID Token</small></p>
+  <button mat-icon-button [cdkCopyToClipboard]="idToken">
+    <mat-icon>content_copy</mat-icon>
+  </button>
+  <textarea readonly placeholder="ID Token" [value]="idToken"></textarea>
+  <p><small>Refreshed ID Token</small></p>
+  <button mat-icon-button [cdkCopyToClipboard]="refreshedIdToken">
+    <mat-icon>content_copy</mat-icon>
+  </button>
+  <textarea readonly placeholder="Refreshed ID Token" [value]="refreshedIdToken"></textarea>
 </div>

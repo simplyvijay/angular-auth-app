@@ -1,0 +1,24 @@
+div {
+  margin: 20px;
+}
+
+mat-form-field {
+  width: 100%;
+  position: relative;
+}
+
+button {
+  margin-right: 10px;
+  margin-bottom: 30px;
+}
+
+button[mat-icon-button] {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 5px;
+}
+
+h3 {
+  margin-top: 20px;
+}

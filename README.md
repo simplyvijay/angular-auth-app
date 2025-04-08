@@ -9,7 +9,12 @@ that helps in faster testing and development.
 1. Register the App with Azure Portal and obtain the Client ID and Tenant ID
 2. Give the redirect URL (Single-Page Application) as `http://localhost:4200`
 3. Clone this repository
-4. From the root directory run `npm install` and `ng serve`
+4. From the root directory run the following
+```bash
+npm install
+npm install -g @angular/cli
+ng serve
+```
 5. Open the browser and navigate to `http://localhost:4200`
 
 

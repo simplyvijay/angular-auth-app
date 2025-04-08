@@ -9,6 +9,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ClipboardModule} from '@angular/cdk/clipboard';
+import { MatSidenavModule} from '@angular/material/sidenav';
+import { Base64Component } from './base64/base64.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [],
@@ -22,7 +26,11 @@ import { ClipboardModule} from '@angular/cdk/clipboard';
     MatFormFieldModule,
     AppComponent,
     HomeComponent,
-    ClipboardModule
+    ClipboardModule,
+    MatSidenavModule,
+    Base64Component,
+    MatTooltipModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [],
