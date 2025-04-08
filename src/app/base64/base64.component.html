@@ -1,0 +1,17 @@
+<div>
+  <h2>Base64 Encoder/Decoder</h2>
+  <mat-form-field appearance="fill">
+    <mat-label>Input Text</mat-label>
+    <textarea matInput [(ngModel)]="inputText"></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="encodeText()">Encode</button>
+  <button mat-raised-button color="accent" (click)="decodeText()">Decode</button>
+  <button mat-raised-button color="accent" (click)="clearText()">Clear</button>
+  <mat-form-field>
+    <mat-label>Output Text</mat-label>
+    <textarea matInput [value]="encodedText || decodedText" readonly></textarea>
+    <button mat-icon-button matTooltip="Copy to clipboard" (click)="copyToClipboard()">
+      <mat-icon>content_copy</mat-icon>
+    </button>
+  </mat-form-field>
+</div>
