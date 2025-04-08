@@ -13,6 +13,7 @@ import { MatSidenavModule} from '@angular/material/sidenav';
 import { Base64Component } from './base64/base64.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [],
@@ -30,7 +31,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatSidenavModule,
     Base64Component,
     MatTooltipModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [],

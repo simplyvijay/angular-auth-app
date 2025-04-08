@@ -17,7 +17,7 @@
     <button mat-raised-button color="warn" [disabled]="!isConfigured" (click)="refreshToken()">Refresh Token</button>
   </div>
 </div>
-<div class="tokens">
+<div class="tokens" style="margin-bottom: 50px;">
   <p><small>Auth Code</small></p>
   <button mat-icon-button [cdkCopyToClipboard]="authCode">
     <mat-icon>content_copy</mat-icon>
@@ -39,3 +39,33 @@
   </button>
   <textarea readonly placeholder="Refreshed ID Token" [value]="refreshedIdToken"></textarea>
 </div>
+
+<mat-card class="user-id-card" *ngIf="showUserCard">
+  <mat-card-content>
+    <div class="photo-area">
+      <img [src]="userPhoto || defaultUserIcon" [alt]="user.name" class="user-photo">
+    </div>
+    <div class="user-info">
+      <div class="info-row">
+        <span class="info-label">Name:</span>
+        <span class="info-value">{{ user.name }}</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Email:</span>
+        <span class="info-value">{{ user.email }}</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">User ID:</span>
+        <span class="info-value">{{ user.preferred_username }}</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Issued:</span>
+        <span class="info-value">{{ user.iat * 1000 | date:'medium' }}</span>
+      </div>
+      <div class="info-row">
+        <span class="info-label">Expires:</span>
+        <span class="info-value">{{ user.exp * 1000 | date: 'medium' }}</span>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
