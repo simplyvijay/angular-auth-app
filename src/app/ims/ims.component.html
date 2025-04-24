@@ -1,0 +1,76 @@
+<div class="ims-container">
+  <h2>IMS Configuration</h2>
+
+  <div class="form-grid">
+    <div class="form-column">
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Client ID</mat-label>
+        <input matInput [(ngModel)]="clientId">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Tenant ID</mat-label>
+        <input matInput [(ngModel)]="tenantId">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>IMS APIGEE</mat-label>
+        <mat-select [(ngModel)]="selectedImsApigeeUrl">
+          <mat-option *ngFor="let url of imsApigeeUrls" [value]="url">
+            {{ url }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Application ID</mat-label>
+        <input matInput [(ngModel)]="applicationId">
+        <button mat-icon-button matSuffix (click)="setApplicationId()" title="Generate UUID">
+          <mat-icon>autorenew</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Correlation ID</mat-label>
+        <input matInput [(ngModel)]="correlationId">
+        <button mat-icon-button matSuffix (click)="setCorrelationId()" title="Generate UUID">
+          <mat-icon>autorenew</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Ford Application ID</mat-label>
+        <input matInput [(ngModel)]="fordApplicationId">
+        <button mat-icon-button matSuffix (click)="setFordApplicationId()" title="Generate UUID">
+          <mat-icon>autorenew</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Redirect URI</mat-label>
+        <input matInput [(ngModel)]="redirectUri">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Auth Code</mat-label>
+        <input matInput [(ngModel)]="authCode">
+        <button mat-icon-button matSuffix (click)="copyAuthCode()" title="Copy Auth Code">
+          <mat-icon>content_copy</mat-icon>
+        </button>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Code Challenge</mat-label>
+        <input matInput [(ngModel)]="codeChallenge">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="full-width">
+        <mat-label>Transaction ID</mat-label>
+        <input matInput [(ngModel)]="transactionId">
+      </mat-form-field>
+
+      <button mat-raised-button (click)="generatePkce()" class="full-width my-button">Generate PKCE</button>
+      <button mat-raised-button color="primary" (click)="login()" class="full-width my-button">Login</button>
+    </div>
+  </div>
+</div>
