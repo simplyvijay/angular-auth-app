@@ -1,0 +1,32 @@
+.ims-container {
+  padding: 24px;
+  max-width: 1000px; /* Optional: Limit width for better readability on large screens */
+  margin: auto; /* Optional: Center the container */
+}
+
+.full-width {
+  width: 40%;
+  margin-bottom: 16px;
+  margin-left: 10px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center; /* Center the title */
+  color: #3f51b5; /* Use primary color for title */
+}
+
+/* Ensure the icon button aligns nicely */
+button[mat-icon-button] {
+  margin-left: 8px; /* Add some space before the icon button */
+}
+
+/* Style the main login button */
+button[mat-raised-button] {
+  margin-top: 20px; /* Add space above the login button */
+  padding: 10px 0; /* Adjust padding */
+}
+
+.my-button {
+  max-width: 40%;
+}
